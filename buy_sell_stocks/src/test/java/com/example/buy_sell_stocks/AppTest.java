@@ -2,6 +2,7 @@ package com.example.buy_sell_stocks;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertSame;
 import java.util.*;
 import org.junit.After;
 import org.junit.Before;
@@ -44,6 +45,7 @@ public class AppTest
             int got = App.maxProfit((List<Integer>) entry.getValue());
             int want = (int) entry.getKey();
             assertEquals(got, want);
+            assertSame(got, want);
         }        
 
     }
